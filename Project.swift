@@ -18,7 +18,9 @@ let project = Project(
             ),
             sources: ["HealthStamp/Sources/**"],
             resources: ["HealthStamp/Resources/**"],
-            dependencies: []
+            dependencies: [
+                .project(target: "TimeStamp", path: "TimeStamp")
+            ]
         ),
         .target(
             name: "HealthStampTests",
